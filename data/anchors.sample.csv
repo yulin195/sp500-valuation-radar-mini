@@ -1,0 +1,11 @@
+# SAMPLE DATA ONLY: illustrative values for demonstration. Not real anchors,
+# not the author's anchors, and not investment advice.
+ticker,trigger,fair_low,fair_high,sector,cap_tier
+AAPL,150,170,210,Information Technology,mega
+MSFT,330,370,450,Information Technology,mega
+AMZN,140,160,200,Consumer Discretionary,mega
+JNJ,140,150,170,Health Care,mega
+JPM,160,180,220,Financials,mega
+XOM,90,100,125,Energy,mega
+PG,140,150,170,Consumer Staples,mega
+KO,55,60,70,Consumer Staples,mega
