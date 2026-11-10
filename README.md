@@ -28,13 +28,15 @@ priced, and no price is ever estimated or filled in.
 
 ## Quick start
 
-> _Commands are placeholders — the CLI is under construction for the
-> hackathon; this section will be finalized with v1._
-
 ```bash
-# planned usage
+cp data/anchors.sample.csv anchors.csv
 python -m radar_mini --anchors anchors.csv --out brief.md
+python -m unittest discover -s tests -t .
 ```
+
+Exit codes: `0` ran, `2` input/validation failure, `3` no ticker could be
+priced (no brief is written). An optional stdio MCP server is in
+`mcp_server.py` (see `docs/how-we-used-kiro.md`).
 
 ## Sample data
 
