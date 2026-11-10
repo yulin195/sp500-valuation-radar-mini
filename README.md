@@ -38,9 +38,13 @@ python -m radar_mini --anchors anchors.csv --out brief.md
 
 ## Sample data
 
-The `anchors.csv` shipped in this repository contains **sample data only**:
-5–10 large-cap example anchors with illustrative values, included so the
-tool can be run out of the box. They are not the author's real anchors.
+The file `data/anchors.sample.csv` shipped in this repository contains
+**sample data only**: 8 large-cap example anchors with illustrative values,
+included so the tool can be run out of the box (copy it to `anchors.csv`).
+They are not the author's real anchors, and the file itself carries a
+`# SAMPLE DATA ONLY` comment line. Lines starting with `#` and blank lines
+are ignored; every other line must be a valid anchor row or the run aborts
+with an error naming the line.
 
 ## Methodology & disclosure
 
