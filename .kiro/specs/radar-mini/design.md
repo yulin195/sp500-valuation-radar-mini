@@ -35,11 +35,13 @@ Yahoo daily closes ──► prices (fetch, R2) ──► {ticker: Close}
 ## Classification (R3)
 
 ```python
-def classify(close: float, trigger: float, fair_low: float) -> Result:
-    # Result: tier (primary) + in_fair_range (bool) + distance_pct
-    in_fair = trigger < close <= fair_low
+def classify(close: float, trigger: float, fair_low: float,
+             fair_high: float) -> Classification:
+    # Classification: tier (primary) + in_fair_range (bool).
+    # distance_pct is computed in the report layer (see data model).
+    in_fair_range = fair_low < close <= fair_high
     if close <= trigger:            tier = "red"
-    elif in_fair:                   tier = "fair"
+    elif close <= fair_low:         tier = "fair"
     elif close <= trigger * 1.05:   tier = "yellow"
     elif close <= trigger * 1.20:   tier = "watch"
     else:                           tier = "ok"
@@ -50,7 +52,7 @@ red/yellow zone and the fair-value entry are tracked as two independent
 dimensions. Mini collapses them to one primary tier for readability, so the
 *stronger* signal (price has actually entered the researched fair-value
 range) is the headline, while `in_fair_range` preserves the second dimension
-for tickers headlined as yellow or red-adjacent. This is the one deliberate
+for tickers whose headline tier is not fair. This is the one deliberate
 simplification versus production; it is documented in the README.
 
 ## Data model

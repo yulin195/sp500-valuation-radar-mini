@@ -5,30 +5,32 @@ November, polish Dec 1–3, submit during the day on Dec 4 (Taipei);
 hard deadline Dec 5, 06:00 Taipei.
 
 ## 1. Repository bootstrap
-- [ ] 1.1 Create the public GitHub repository with MIT LICENSE visible in
+- [x] 1.1 Create the public GitHub repository with MIT LICENSE visible in
       the About section; confirm `/.kiro` is not gitignored.
-- [ ] 1.2 Add `.kiro/steering/` project conventions (code style, fail-closed
+- [x] 1.2 Add `.kiro/steering/` project conventions (code style, fail-closed
       rule, no-secrets rule from requirements R5).
-- [ ] 1.3 Skeleton package layout from design.md (loader/prices/engine/
+- [x] 1.3 Skeleton package layout from design.md (loader/prices/engine/
       report/cli) with a runnable no-op CLI.
 
 ## 2. Anchor loader (R1)
-- [ ] 2.1 CSV parsing + validation with row-naming errors.
-- [ ] 2.2 Sample `anchors.csv` with 5–10 large-cap sample anchors, labelled
+- [x] 2.1 CSV parsing + validation with row-naming errors.
+- [x] 2.2 Sample `anchors.csv` with 5–10 large-cap sample anchors, labelled
       as sample data.
-- [ ] 2.3 Unit tests for every malformed-row case in R1.3.
+- [x] 2.3 Unit tests for every malformed-row case in R1.3.
 
 ## 3. Price retrieval (R2)
-- [ ] 3.1 Yahoo daily-close fetch, latest completed close only.
-- [ ] 3.2 `no-data` result path + staleness rule; no silent carry-forward.
-- [ ] 3.3 Unit tests for the fail-closed paths (R2.3–R2.4).
+- [x] 3.1 Yahoo daily-close fetch, latest completed close only.
+- [x] 3.2 `no-data` result path + staleness rule; no silent carry-forward.
+- [x] 3.3 Unit tests for the fail-closed paths (R2.3–R2.4).
 
 ## 4. Classification engine (R3)
-- [ ] 4.1 Implement `engine.classify` exactly as designed (precedence:
+- [x] 4.1 Implement `engine.classify` exactly as designed (precedence:
       red > fair > yellow > watch > ok, plus `in_fair_range`).
-- [ ] 4.2 Property-based tests: monotonicity, boundary inclusivity,
+- [x] 4.2 Property-based tests: monotonicity, boundary inclusivity,
       exclusivity (R6.1).
 - [ ] 4.3 Sorting + cap-tier tie-break (R4.3) with unit tests.
+      (Deferred to batch 2: distance_pct and sorting live in the report
+      layer, task 5.)
 
 ## 5. Reporting (R4)
 - [ ] 5.1 Terminal table.

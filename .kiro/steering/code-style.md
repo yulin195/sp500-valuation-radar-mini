@@ -13,7 +13,8 @@ Draft v1, 2026-11-10 (task 1.2). Companion files: `fail-closed.md`,
   `prices.py` (Yahoo daily closes), `engine.py` (pure classification),
   `report.py` (terminal table + Markdown brief), `cli.py` (args, exit
   codes). Do not merge layers or let I/O leak into `engine.py`.
-- `engine.classify` stays a pure function of (close, trigger, fair_low).
+- `engine.classify` stays a pure function of (close, trigger, fair_low,
+  fair_high).
   Tier precedence is fixed: red > fair-value zone > yellow > watch > ok,
   with `in_fair_range` carried as a separate boolean. Changing precedence
   requires updating design.md, requirements.md (R3) and the README
