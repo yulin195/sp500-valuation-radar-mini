@@ -40,3 +40,7 @@ out/
 
 # NOTE: /.kiro is a judged part of this submission and must stay committed.
 # Do NOT add .kiro to this file.
+
+# Internal planning docs (kept locally, not part of the public repo)
+PLAN.md
+rules-digest-*.md
