@@ -28,19 +28,19 @@ hard deadline Dec 5, 06:00 Taipei.
       red > fair > yellow > watch > ok, plus `in_fair_range`).
 - [x] 4.2 Property-based tests: monotonicity, boundary inclusivity,
       exclusivity (R6.1).
-- [ ] 4.3 Sorting + cap-tier tie-break (R4.3) with unit tests.
+- [x] 4.3 Sorting + cap-tier tie-break (R4.3) with unit tests.
       (Deferred to batch 2: distance_pct and sorting live in the report
       layer, task 5.)
 
 ## 5. Reporting (R4)
-- [ ] 5.1 Terminal table.
-- [ ] 5.2 Markdown brief with coverage note and disclaimer.
-- [ ] 5.3 Golden-file test with fixed closes.
+- [x] 5.1 Terminal table.
+- [x] 5.2 Markdown brief with coverage note and disclaimer.
+- [x] 5.3 Golden-file test with fixed closes.
 
 ## 6. Kiro showcase pieces (judging: Technological Implementation)
-- [ ] 6.1 Agent hook: run the test suite on file save.
-- [ ] 6.2 At least one MCP use case, documented in the write-up.
-- [ ] 6.3 "How we used Kiro" write-up covering the official directions
+- [x] 6.1 Agent hook: run the test suite on file save.
+- [x] 6.2 At least one MCP use case, documented in the write-up.
+- [x] 6.3 "How we used Kiro" write-up covering the official directions
       (spec-driven vs vibe, steering, hooks, MCP, property-based testing).
 
 ## 7. Submission polish (Dec 1–3)

@@ -1,0 +1,16 @@
+{
+  "version": "v1",
+  "hooks": [
+    {
+      "name": "Run tests on Python save",
+      "trigger": "PostFileSave",
+      "description": "Run the unittest suite whenever a .py file is saved",
+      "matcher": "\\.py$",
+      "action": {
+        "type": "command",
+        "command": "python -m unittest discover -s tests -t .",
+        "timeout": 120
+      }
+    }
+  ]
+}
